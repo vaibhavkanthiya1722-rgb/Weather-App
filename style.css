@@ -1,4 +1,4 @@
-/* ===== BODY ===== */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -9,7 +9,6 @@ body {
     background-color: #eaf6ff;
 }
 
-/* ===== CARD ===== */
 .card {
     width: 650px;
     padding: 20px;
@@ -27,7 +26,6 @@ body {
     z-index: 1;
 }
 
-/* ===== LAYOUT ===== */
 .main {
     display: flex;
     justify-content: space-between;
@@ -39,7 +37,6 @@ body {
     flex: 1;
 }
 
-/* ===== TOP ===== */
 .top {
     display: flex;
     justify-content: space-between;
@@ -52,7 +49,7 @@ body {
     color: #1a1a1a;
 }
 
-/* ===== BUTTON FIX ===== */
+
 .top button {
     width: 40px;
     height: 40px;
@@ -68,7 +65,7 @@ body {
     background: #f1f1f1;
 }
 
-/* ===== SEARCH ===== */
+
 .search {
     display: flex;
     gap: 10px;
@@ -92,14 +89,14 @@ body {
     cursor: pointer;
 }
 
-/* ===== PLACEHOLDER ===== */
+
 #placeholder {
     text-align: center;
     margin: 10px 0;
     color: #333;
 }
 
-/* ===== WEATHER ===== */
+
 .weather-box {
     text-align: center;
     margin-top: 10px;
@@ -120,7 +117,7 @@ body {
     color: #333;
 }
 
-/* ===== FORECAST ===== */
+
 .forecast {
     display: flex;
     overflow-x: auto;
@@ -146,7 +143,7 @@ canvas {
     height: 200px !important;
 }
 
-/* ===== RIGHT IMAGE ===== */
+
 .right {
     display: flex;
     justify-content: center;
@@ -159,7 +156,7 @@ canvas {
     animation: float 3s ease-in-out infinite;
 }
 
-/* ===== FLOAT ANIMATION ===== */
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -174,7 +171,7 @@ canvas {
     }
 }
 
-/* ===== WEATHER ANIMATION ===== */
+
 .weather-anim {
     position: fixed;
     width: 100%;
@@ -182,7 +179,7 @@ canvas {
     pointer-events: none;
 }
 
-/* CLOUDS */
+
 .cloud {
     position: absolute;
     width: 120px;
@@ -210,7 +207,7 @@ canvas {
     }
 }
 
-/* RAIN */
+
 .rain {
     position: absolute;
     width: 100%;
@@ -229,7 +226,7 @@ canvas {
     }
 }
 
-/* ===== DARK MODE ===== */
+
 .dark {
     background-color: #121212;
 }
@@ -247,7 +244,7 @@ canvas {
     color: #ccc;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 600px) {
     .main {
         flex-direction: column;

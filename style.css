@@ -1,0 +1,272 @@
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eaf6ff;
+}
+
+/* ===== CARD ===== */
+.card {
+    width: 650px;
+    padding: 20px;
+    border-radius: 20px;
+
+    /* gradient background */
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+
+    /* 🔥 TEXT DARK */
+    color: #2c3e50;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== LAYOUT ===== */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.left {
+    flex: 1;
+}
+
+/* ===== TOP ===== */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top h2 {
+    font-size: 22px;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+/* ===== BUTTON FIX ===== */
+.top button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.top button:hover {
+    background: #f1f1f1;
+}
+
+/* ===== SEARCH ===== */
+.search {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #dfe6e9;
+    font-size: 14px;
+}
+
+.search button {
+    padding: 10px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ===== PLACEHOLDER ===== */
+#placeholder {
+    text-align: center;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* ===== WEATHER ===== */
+.weather-box {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.weather-box img {
+    width: 60px;
+}
+
+#temp {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+
+#desc {
+    font-style: italic;
+    color: #333;
+}
+
+/* ===== FORECAST ===== */
+.forecast {
+    display: flex;
+    overflow-x: auto;
+}
+
+.day {
+    min-width: 75px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* ===== CHART ===== */
+canvas {
+    margin-top: 10px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100% !important;
+    height: 200px !important;
+}
+
+/* ===== RIGHT IMAGE ===== */
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img {
+    width: 130px;
+    max-width: 100%;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ===== FLOAT ANIMATION ===== */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ===== WEATHER ANIMATION ===== */
+.weather-anim {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* CLOUDS */
+.cloud {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    background: url("https://cdn-icons-png.flaticon.com/512/414/414825.png") no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.cloud1 {
+    top: 20%;
+    left: -150px;
+    animation: moveClouds 25s linear infinite;
+}
+
+.cloud2 {
+    top: 50%;
+    left: -200px;
+    animation: moveClouds 35s linear infinite;
+}
+
+@keyframes moveClouds {
+    100% {
+        transform: translateX(120vw);
+    }
+}
+
+/* RAIN */
+.rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: repeating-linear-gradient(transparent,
+            transparent 5px,
+            rgba(255, 255, 255, 0.4) 5px,
+            rgba(255, 255, 255, 0.4) 10px);
+    animation: rainFall 0.5s linear infinite;
+}
+
+@keyframes rainFall {
+    to {
+        background-position: 0 20px;
+    }
+}
+
+/* ===== DARK MODE ===== */
+.dark {
+    background-color: #121212;
+}
+
+.dark .card {
+    background: linear-gradient(135deg, #2d3436, #000);
+    color: white;
+}
+
+.dark #temp {
+    color: white;
+}
+
+.dark #desc {
+    color: #ccc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .right img {
+        width: 100px;
+    }
+
+    #temp {
+        font-size: 30px;
+    }
+
+    .top h2 {
+        font-size: 18px;
+    }
+}
